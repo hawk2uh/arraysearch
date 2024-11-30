@@ -18,11 +18,7 @@
 ### Python
 
 ```python
-def binary_search(list, x):
-
-    # Wyznaczamy indeksy końcowe zbioru danych
-    left = 0
-    right = len(list) - 1
+def binary_search(list, left, right, x):
 
     # Warunek dla zakończenia szukania wartości
     while left <= right:
@@ -46,8 +42,33 @@ def binary_search(list, x):
     return -1
 ```
 
-### Java
+### C++
+```C++
+int binarySearch(int arr[], int left, int right, int x)
+{
+  	// Warunek dla zakończenia szukania wartości
+    while (left <= right) {
+    
+    	// Wyznaczamy środek rozpatrywanego zbioru danych
+        int mid = left + (right - left) / 2;
 
+        // Sprawdzamy, czy szukana wartość znajduje się w środku
+        if (arr[mid] == x)
+            return mid;
+
+        // Jeśli szukana wartość jest większa, ignorujemy lewą stronę
+        if (arr[mid] < x)
+            left = mid + 1;
+
+        // Jeśli szukana wartość jest mniejsza, ignorujemy prawą stronę
+        else
+            right = mid - 1;
+    }
+
+    // Jeśli dojdziemy tutaj, oznacza to, że wartość nie występuje w zbiorze danych
+    return -1;
+}
+```
 ---
 
 ## 4. Zadania ##
