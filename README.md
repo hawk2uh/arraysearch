@@ -1,6 +1,17 @@
 # Metoda binarnego wyszukiwania
 ## Czym jest wyszukiwanie binarne?
 1. **Wyszukiwanie binarne** – zwane również „podziałem na pół”, to algorytm, który w bardzo efektywny sposób odnajduje poszukiwany element w posortowanym zbiorze danych. Ta pozornie trywialna idea sprawia, że algorytm ten doskonale sprawdza się w praktyce, szczególnie przy dużych ilościach danych.
+   
+### **Zalety**:
+- Jest bardzo szybkie (złożoność obliczeniowa - **O(log n)**)
+  
+### **Wady**:
+- Może być wykorzystane tylko dla posortowanego zbioru danch
+
+4. **Zadania**
+### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
+###
+
 ## Żródła:
 - https://www.geeksforgeeks.org/binary-search/#what-is-binary-search
 - https://pl.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
