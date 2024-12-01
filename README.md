@@ -16,25 +16,25 @@
 ```python
 def binary_search(list, left, right, x):
 
-    # Warunek dla zakończenia szukania wartości
+    # warunek dla zakończenia szukania wartości
     while left <= right:
 
-        # Wyznaczamy środek rozpatrywanego zbioru danych
+        # wyznaczamy środek rozpatrywanego zbioru danych
         mid = left + (right - left) // 2
 
-        # Sprawdzamy, czy szukana wartość znajduje się w środku
+        # sprawdzamy, czy szukana wartość znajduje się w środku
         if list[mid] == x:
             return mid
 
-        # Jeśli szukana wartość jest większa, ignorujemy lewą stronę
+        # jeśli szukana wartość jest większa, ignorujemy lewą stronę
         elif list[mid] < x:
             left = mid + 1
 
-        # Jeśli szukana wartość jest mniejsza, ignorujemy prawą stronę
+        # jeśli szukana wartość jest mniejsza, ignorujemy prawą stronę
         else:
             right = mid - 1
 
-    # Jeśli dojdziemy tutaj, oznacza to, że wartość nie występuje w zbiorze danych
+    # jeśli dojdziemy tutaj, oznacza to, że wartość nie występuje w zbiorze danych
     return -1
 ```
 ---
@@ -52,8 +52,32 @@ Dla zbioru liczb `[16, 17, 4, 3, 5, 2]` liderem są 17, 5 i 2
 2. Ostatni element zawsze jest liderem, więc przenosimy go to `output` i przypisujemy zmiennej `max` jego wartość
 3. Po napotkaniu kolejnej liczby sprawdzamy, czy jest większa od `max`
    - Jeśli tak, przenosimy ją do `output` i zmieniamy wartość `max` na tę liczbę 
-   - Jeśli nie, przechodzimy do następnego elementu
+   - W innym wypadku przechodzimy do następnego elementu
 
+### Implementacja
+```python
+def leaders(list):
+    result = []
+    n = len(list)
+
+    # przypisujemy zmiennej max wartość ostatniego elementu
+    max = list[-1]
+
+    # ostatni element zawsze jest liderem
+    result.append(max)
+
+    # iterujemy po liście od prawej do lewej
+    for i in range(n - 2, -1, -1):
+        # jeśli wartość jest większa od maxa, to jest liderem
+        if list[i] > max:
+            # aktualizujemy wartość zmiennej max
+            max = list[i]
+            result.append(max)
+
+    result.reverse()
+
+    return result
+```
 
 ## 4. Zadania ##
 #### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
