@@ -78,6 +78,8 @@ def leaders(list):
 
     return result
 ```
+## 2. Szukanie idola w zbiorze danych
+**Idol** - element, który występuje w zbiorze więcej niż połowę razy, czyli więcej niż `n/2` razy, gdzie `n` jest liczbą elementów zbioru.
 
 ## 4. Zadania ##
 #### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
