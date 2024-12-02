@@ -101,3 +101,4 @@ Zbiór liczb `[3, 3, 4, 2, 4, 4, 2, 4]` nie ma idola
 - https://www.geeksforgeeks.org/leaders-in-an-array/
 - https://takeuforward.org/data-structure/leaders-in-an-array/
 - https://www.geeksforgeeks.org/majority-element/
+- https://www.youtube.com/watch?v=7pnhv842keE&ab_channel=NeetCode
