@@ -88,6 +88,28 @@ Dla zbioru liczb `[3, 2, 3]` idolem jest 3 (pojawia się 2 razy w 3-elementowym 
 
 Dla zbioru liczb `[1, 1, 2, 1, 3, 5, 1]` idolem jest 1 (pojawia się 4 razy w 7-elementowym zbiorze)
 
+### Proces znajdowania idola
+
+1. Inicjujemy zmienne `result` i `count`
+2. Iterujemy przez zbiór danych:
+   - jeśli `count` jest równy zero, przypisujemy zmiennej `result` aktualny element
+   - jeśli aktualny element jest równy `result` zwiększamy `count` o jeden
+   - w przeciwnym wypadku zmniejszamy `count` o jeden
+3. Zwracamy `result`, czyli znalezionego idola
+ 
+### Implementacja
+```python
+def majority_element(arr):
+    result = 0
+    count = 0
+
+    for i in arr:
+        if count == 0:
+            result = i
+        count += (1 if i == result else -1)
+
+    return result
+```
 
 ## 4. Zadania ##
 #### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
