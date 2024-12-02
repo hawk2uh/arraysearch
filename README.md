@@ -80,7 +80,11 @@ def leaders(list):
 ```
 ## 2. Szukanie idola w zbiorze danych
 **Idol** - element, który występuje w zbiorze więcej niż połowę razy, czyli więcej niż `n/2` razy, gdzie `n` jest liczbą elementów zbioru.
-#### Przykład:
+#### Przykłady: 
+
+Dla zbioru liczb `[1, 1, 2, 1, 3, 5, 1]` idolem jest 1 (jedynka pojawia się 4 razy w 7-elementowym zbiorze)
+
+Zbiór liczb `[3, 3, 4, 2, 4, 4, 2, 4]` nie ma idola
 
 ## 4. Zadania ##
 #### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
