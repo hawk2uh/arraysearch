@@ -1,4 +1,4 @@
-# Metoda binarnego wyszukiwania
+# Szukanie określonego elementu w zbiorze
 ## 1. Wyszukiwanie binarne
 **Wyszukiwanie binarne** – zwane również „podziałem na pół”, to algorytm, który w bardzo efektywny sposób odnajduje poszukiwany element w posortowanym zbiorze danych. Ta pozornie trywialna idea sprawia, że algorytm ten doskonale sprawdza się w praktyce, szczególnie przy dużych ilościach danych.
    
@@ -80,6 +80,7 @@ def leaders(list):
 ```
 ## 2. Szukanie idola w zbiorze danych
 **Idol** - element, który występuje w zbiorze więcej niż połowę razy, czyli więcej niż `n/2` razy, gdzie `n` jest liczbą elementów zbioru.
+#### Przykład:
 
 ## 4. Zadania ##
 #### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
@@ -90,9 +91,9 @@ def leaders(list):
 
 ## Żródła:
 - https://www.geeksforgeeks.org/binary-search/#what-is-binary-search
-- https://pl.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
 - https://stormit.pl/wyszukiwanie-binarne/#wyszukiwanie-binarne-wprowadzenie
 - https://www.youtube.com/watch?v=hDn8iOc30Tk&ab_channel=Computerphile
 - https://pl.wikipedia.org/wiki/Wyszukiwanie_binarne
 - https://www.geeksforgeeks.org/leaders-in-an-array/
-- 
+- https://takeuforward.org/data-structure/leaders-in-an-array/
+- https://www.geeksforgeeks.org/majority-element/
