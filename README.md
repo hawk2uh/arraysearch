@@ -6,7 +6,7 @@
 - Jest szybkie (złożoność obliczeniowa - **O(log n)**)
   
 ### **Wady**:
-- Może być wykorzystane tylko dla posortowanego zbioru danch
+- Może być wykorzystane tylko dla posortowanego zbioru danych
 ---
 ### Mechanizm działania
 1. Dzielimy zbiór danych na dwie części wyznaczając środkowy indeks `mid`
@@ -21,27 +21,27 @@
 
 ### Implementacja wyszukiwania binarnego
 ```python
-def binary_search(list, left, right, x):
+def binary_search_iterative(arr, left, right, x):
 
-    # warunek dla zakończenia szukania wartości
+    # Warunek dla zakończenia szukania wartości
     while left <= right:
 
-        # wyznaczamy środek rozpatrywanego zbioru danych
+        # Wyznaczamy środek rozpatrywanego zbioru danych
         mid = left + (right - left) // 2
 
-        # sprawdzamy, czy szukana wartość znajduje się w środku
-        if list[mid] == x:
+        # Sprawdzamy, czy szukana wartość znajduje się w środku
+        if arr[mid] == x:
             return mid
 
-        # jeśli szukana wartość jest większa, ignorujemy lewą stronę
-        elif list[mid] < x:
+        # Jeśli szukana wartość jest większa, ignorujemy lewą stronę
+        elif arr[mid] < x:
             left = mid + 1
 
-        # jeśli szukana wartość jest mniejsza, ignorujemy prawą stronę
+        # Jeśli szukana wartość jest mniejsza, ignorujemy prawą stronę
         else:
             right = mid - 1
 
-    # jeśli dojdziemy tutaj, oznacza to, że wartość nie występuje w zbiorze danych
+    # Jeśli dojdziemy tutaj, oznacza to, że wartość nie występuje w zbiorze danych
     return -1
 ```
 ---
@@ -56,19 +56,19 @@ Dla zbioru liczb `[16, 17, 4, 3, 5, 2]` liderem są 17, 5 i 2
 
 ### Proces znajdowania lidera
 1. Zaczynając od ostatniego elementu skanujemy wszystkie liczby w zbiorze danych
-2. Ostatni element zawsze jest liderem, więc przenosimy go to `output` i przypisujemy zmiennej `max` jego wartość
+2. Ostatni element zawsze jest liderem, więc przenosimy go do `output` i przypisujemy zmiennej `max` jego wartość
 3. Po napotkaniu kolejnej liczby sprawdzamy, czy jest większa od `max`
    - Jeśli tak, przenosimy ją do `output` i zmieniamy wartość `max` na tę liczbę 
    - W innym wypadku przechodzimy do następnego elementu
 
 ### Implementacja
 ```python
-def leaders(list):
+def leaders(arr):
     result = []
-    n = len(list)
+    n = len(arr)
 
     # przypisujemy zmiennej max wartość ostatniego elementu
-    max = list[-1]
+    max = arr[-1]
 
     # ostatni element zawsze jest liderem
     result.append(max)
@@ -76,16 +76,16 @@ def leaders(list):
     # iterujemy po liście od prawej do lewej
     for i in range(n - 2, -1, -1):
         # jeśli wartość jest większa od maxa, to jest liderem
-        if list[i] > max:
+        if arr[i] > max:
             # aktualizujemy wartość zmiennej max
-            max = list[i]
+            max = arr[i]
             result.append(max)
 
     result.reverse()
 
     return result
 ```
-## 2. Szukanie idola w zbiorze danych
+## 3. Szukanie idola w zbiorze danych
 **Idol** - element, który występuje w zbiorze więcej niż połowę razy, czyli więcej niż `n/2` razy, gdzie `n` jest liczbą elementów zbioru.
 
 **Uwaga**: Zakładamy, że każdy rozpatrywany zbiór danych ma idola
@@ -120,14 +120,13 @@ def majority_element(arr):
 
 ## 4. Zadania ##
 #### 1. Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
----
+
 #### 2. Rozwiń funkcjonalność algorytmu szukającego idola poprzez wprowadzenie możliwości rozpatrywania zbiorów danych bez idola (np. `[3, 3, 4, 2, 4, 4, 2, 4]` - brak idola)
----
-#### 3. 
 
+#### 3. Napisz funkcję, która znajduje pierwiastek kwadratowy z podanej liczby. Jeśli wartość ta nie jest liczbą wymierną, zaokrąglij ją w dół. Skorzystaj z wyszukiwania binarnego.
 ---
 
-## Żródła:
+## Źródła:
 - https://www.geeksforgeeks.org/binary-search/#what-is-binary-search
 - https://stormit.pl/wyszukiwanie-binarne/#wyszukiwanie-binarne-wprowadzenie
 - https://www.youtube.com/watch?v=hDn8iOc30Tk&ab_channel=Computerphile
