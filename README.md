@@ -9,6 +9,13 @@
 - Może być wykorzystane tylko dla posortowanego zbioru danch
 ---
 ### Mechanizm działania
+1. Dzielimy zbiór danych na dwie części wyznaczając środkowy indeks `mid`
+2. Porównujemy środkowy element w indeksie `mid` z szukaną wartością `x`
+3. Jeśli szukana wartość zostanie znaleziona w indeksie `mid`, zwracamy ten indeks
+4. W przeciwnym wypadku decydujemy, którą część zbioru będziemy dalej rozpatrywać
+5. Jeśli szukana wartość `x` jest mniejsza od środkowego elementu, odrzucamy prawą stronę zbioru danych
+6. Jeśli szukana wartość `x` jest większa od środkowego elementu, odrzucamy lewą stronę zbioru danych
+7. Kontynuujemy proces aż znajdziemy szukaną wartość 
 
 ---
 
@@ -112,7 +119,8 @@ def majority_element(arr):
 ```
 
 ## 4. Zadania ##
-#### Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
+#### 1. Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
+#### 2. Rozwiń funkcjonalność algorytmu szukającego idola poprzez wprowadzenie możliwości rozpatrywania zbiorów danych bez idola (np. `[3, 3, 4, 2, 4, 4, 2, 4]` - brak idola)
 
 
 
