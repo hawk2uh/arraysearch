@@ -120,9 +120,10 @@ def majority_element(arr):
 
 ## 4. Zadania ##
 #### 1. Napisz algorytm wyszukiwania binarnego w wersji rekurencyjnej.
+---
 #### 2. Rozwiń funkcjonalność algorytmu szukającego idola poprzez wprowadzenie możliwości rozpatrywania zbiorów danych bez idola (np. `[3, 3, 4, 2, 4, 4, 2, 4]` - brak idola)
-
-
+---
+#### 3. 
 
 ---
 
