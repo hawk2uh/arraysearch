@@ -21,7 +21,7 @@
 
 ### Implementacja wyszukiwania binarnego
 ```python
-def binary_search_iterative(arr, left, right, x):
+def binary_search(arr, left, right, x):
 
     # Warunek dla zakończenia szukania wartości
     while left <= right:
