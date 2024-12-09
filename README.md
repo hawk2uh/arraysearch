@@ -27,7 +27,7 @@ def binary_search(arr, left, right, x):
     while left <= right:
 
         # Wyznaczamy środek rozpatrywanego zbioru danych
-        mid = left + (right - left) // 2
+        mid = (right + left) // 2
 
         # Sprawdzamy, czy szukana wartość znajduje się w środku
         if arr[mid] == x:
